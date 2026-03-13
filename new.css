@@ -1,0 +1,361 @@
+:root {
+    --bg-dark: #0b1120;
+    --bg-secondary: #131c31;
+    --card-bg: rgba(255, 255, 255, 0.06);
+    --primary: #38bdf8;
+    --secondary: #8b5cf6;
+    --text-light: #f8fafc;
+    --text-muted: #cbd5e1;
+    --border-light: rgba(255, 255, 255, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, var(--bg-dark), #0f172a, #111827);
+    color: var(--text-light);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.brand-text {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* HERO */
+.hero-section {
+    min-height: 100vh;
+    padding: 80px 0;
+
+    background:
+        linear-gradient(180deg, rgba(11, 17, 32, 0.85), rgba(15, 23, 42, 0.9), rgba(17, 24, 39, 0.95)),
+        url("black-keyboard-stickers_612x.progressive.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.brand-text {
+    color: var(--primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-subtext {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    max-width: 550px;
+    margin-bottom: 25px;
+}
+
+.hero-img {
+    border-radius: 24px;
+    max-height: 300px;
+    object-fit: cover;
+    width: 100%;
+  
+    border: 6px solid rgb(255, 255, 255);
+  
+    filter: brightness(90%) contrast(105%);
+    box-shadow: 0 0px 100px rgb(0, 242, 255);
+  
+    transform: rotate(-3deg);
+    transition: transform 0.4s ease;
+  }
+  
+  .hero-img:hover {
+    transform: rotate(0deg) scale(1.03);
+  }
+
+/* BUTTONS */
+.btn-tech {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-tech:hover {
+    transform: translateY(-2px);
+    color: white;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+}
+
+.btn-outline-tech {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    background: transparent;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-outline-tech:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* CARDS */
+.info-card,
+.product-card,
+.feature-card,
+.price-card,
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 20px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s ease;
+}
+
+.info-card:hover,
+.product-card:hover,
+.feature-card:hover,
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h4,
+.product-card h4,
+.price-card h4 {
+    margin-bottom: 15px;
+}
+
+.info-card p,
+.product-card p,
+.feature-card p,
+.price-card p,
+.contact-card p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* PRODUCTS */
+.product-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 18px;
+}
+
+.product-section {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* FEATURES */
+.icon-wrap {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(139, 92, 246, 0.2));
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+/* PRICING */
+.pricing-section {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.price-card h3 {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin: 15px 0 10px;
+}
+
+.price-card ul {
+    margin: 20px 0;
+    padding: 0;
+}
+
+.price-card ul li {
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.price-desc {
+    color: #e2e8f0 !important;
+}
+
+.featured-price {
+    border: 1px solid var(--primary);
+    position: relative;
+}
+
+.badge-offer {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+}
+
+.promo-text {
+    color: var(--text-muted);
+}
+
+/* CONTACT */
+.form-control {
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-light);
+    color: white;
+    padding: 12px 14px;
+    border-radius: 12px;
+}
+
+.form-control::placeholder {
+    color: #94a3b8;
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: none;
+}
+
+.form-label {
+    color: #e2e8f0;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--text-light);
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+.footer {
+    padding: 25px 0;
+    border-top: 1px solid var(--border-light);
+    color: var(--text-muted);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .hero-section {
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-subtext {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-title {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-img {
+        max-height: 350px;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-subtext,
+    .section-subtitle,
+    .info-card p,
+    .product-card p,
+    .feature-card p,
+    .price-card p,
+    .contact-card p,
+    .price-card ul li {
+        font-size: 0.95rem;
+    }
+
+    .btn-tech,
+    .btn-outline-tech {
+        width: 100%;
+        text-align: center;
+    }
+
+    .product-img {
+        height: 200px;
+    }
+}
